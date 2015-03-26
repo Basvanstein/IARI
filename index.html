@@ -31,21 +31,31 @@
       </header>
       <section>
         <h1>
-<a id="iari" class="anchor" href="#iari" aria-hidden="true"><span class="octicon octicon-link"></span></a>IARI</h1>
+<a id="iari---incremental-attribute-regression-imputation" class="anchor" href="#iari---incremental-attribute-regression-imputation" aria-hidden="true"><span class="octicon octicon-link"></span></a>IARI - Incremental Attribute Regression Imputation</h1>
 
-<p>Incremental Attribute Regression Imputation</p>
+<p>Real-life datasets that occur in domains such as industrial process control, medical diagnosis, marketing, risk management, often contain missing values. This poses a challenge for many classification and regression algorithms which require complete training sets. We present a new approach for "repairing" such incomplete datasets by constructing a sequence of regression models that iteratively replace all missing values. Additionally, our approach uses the target attribute to estimate the values of missing data. The accuracy of our method, Incremental Attribute Regression Imputation, IARI, is compared with the accuracy of several popular and state of the art imputation methods, by applying them to five publicly available benchmark datasets. The results demonstrate the superiority of our approach.</p>
 
 <h1>
-<a id="to-do" class="anchor" href="#to-do" aria-hidden="true"><span class="octicon octicon-link"></span></a>TO DO</h1>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>HOW TO USE</h1>
 
-<ul>
-<li>How to use instructions</li>
-<li>Complete report of results</li>
-<li>Introduction</li>
-</ul>
+<p>To run the IARI algorithm you need Python 2.7.X, NumPi, Scikit-Learn and a few other python packages installed.
+Run the algorithm with the command: 
+<code>python runrepair.py datasetname modelname &gt; outputfile.txt</code>
+Where <em>datasetname</em> can be one of:
+page, concrete, digits, iris, cover, allhouses
+And <em>modelname</em> can be one of:
+Gradient, RandomForest, SVM, Gaussian</p>
+
+<p>The final results will be outputted in a latex table format.</p>
+
+<h1>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results</h1>
+
+<p>You can find all the results of all our experiments together with the experimental setup here:
+<a href="https://github.com/Basvanstein/IARI/blob/master/AlgorithmResults.pdf">Results.pdf</a></p>
       </section>
       <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
