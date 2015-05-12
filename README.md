@@ -7,10 +7,11 @@ Real-life datasets that occur in domains such as industrial process control, med
 To run the IARI algorithm you need Python 2.7.X, NumPi, Scikit-Learn and a few other python packages installed. 
 Some of the datasets are provided in this repository and should be in the same folder as the script, other datasets will be downloaded on the fly.
 
-Run the algorithm with the command: *python runrepair.py datasetname modelname > outputfile.txt*
+Run the algorithm with the command: *python test.py datasetname modelname > outputfile.txt*
 Where datasetname can be one of: page, concrete, digits, iris, cover, or allhouses.
 And modelname can be one of: Gradient, RandomForest, SVM, or Gaussian.
 
+Note that you need the folder "img" and "arrays" to store the results.
 The final results will be outputted in a latex table format.
 
 ## Results

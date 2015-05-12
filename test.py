@@ -520,11 +520,11 @@ for MAR in MAR_IN:
 		allbestalgs.append( best_algorithm )
 
 
-		if os.path.isdir('/home/promimoocbas/arrays/') == False:
-			os.makedirs('/home/promimoocbas/arrays/')
+		if os.path.isdir('arrays/') == False:
+			os.makedirs('arrays/')
 
-		if os.path.isdir('/home/promimoocbas/img/') == False:
-			os.makedirs('/home/promimoocbas/img/')
+		if os.path.isdir('img/') == False:
+			os.makedirs('img/')
 			
 		
 		#print allscores.shape
@@ -534,12 +534,12 @@ for MAR in MAR_IN:
 		pl.title('Performance of different imputation methods')
 		pl.xticks(np.arange(7)+1, ( 'Reference','Mean', 'Median', 'Most Frequent', 'PVI', 'RI', 'IARI') )
 		if (MAR):
-			pl.savefig( '/home/promimoocbas/img/'+final_model+'_avg_result_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MAR.png')
+			pl.savefig( 'img/'+final_model+'_avg_result_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MAR.png')
 		else:
-			pl.savefig( '/home/promimoocbas/img/'+final_model+'_avg_result_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MNAR.png')
+			pl.savefig( 'img/'+final_model+'_avg_result_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MNAR.png')
 		pl.clf()
 		
-		np.save( '/home/promimoocbas/img/Z'+final_model+'_allscores_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MNAR.npy', allscores)
+		np.save( 'img/Z'+final_model+'_allscores_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MNAR.npy', allscores)
 
 		pl.figure(figsize=(10,6))
 		pl.bar(ind, avgmeansquarederrors,   0.4, color='r')
@@ -547,9 +547,9 @@ for MAR in MAR_IN:
 		pl.title('RMSE per imputation method')
 		pl.xticks(ind+0.4/2., ( 'Mean', 'Median', 'Most Frequent', 'PVI', 'RI', 'IARI') )
 		if (MAR):
-			pl.savefig('/home/promimoocbas/img/'+final_model+'_avg_rmse_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MAR.png')
+			pl.savefig('img/'+final_model+'_avg_rmse_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MAR.png')
 		else:
-			pl.savefig('/home/promimoocbas/img/'+final_model+'_avg_rmse_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MNAR.png')
+			pl.savefig('img/'+final_model+'_avg_rmse_'+dataname+'_missing_'+`missing_perc_2`+'_percent_MNAR.png')
 		pl.clf()
 
 
